@@ -1,0 +1,108 @@
+body { 
+font-family:Arial,Helvettica,sans-serif;
+color: #383838; 
+background: #ffffcc; 
+background-image: url('clouds-background-light.jpg');
+background-repeat: no-repeat; 
+background-attachment: fixed;
+background-size:cover;
+}
+
+#header {
+    background-image: url("viggen.png");
+    background-repeat: no-repeat;
+	background-position: left top;
+    background-attachment: fixed;
+	height:150px;
+	padding:1px;
+}	
+
+#nav {
+text-align:center;
+ padding:30px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    border-radius: 12px;
+	color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.le  {
+   background-color: #666;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.flex-container {
+	display: flex;
+	background: #fff;
+	flex-wrap: wrap;
+	
+}
+.box {
+	height:100px;
+	width:100px;
+}
+.one{
+	background:red;
+	width: 150px;
+    height: 1131px;	
+	padding:1px;
+}
+.two{
+	background:blue;
+	width: 781px;	
+	height: 1331px;	
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #000;
+	
+	
+}
+.three{
+	background:green;
+	width: 960px;	
+	height : 50px;
+	border: 1px solid #000;
+}
