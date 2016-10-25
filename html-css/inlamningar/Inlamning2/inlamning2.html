@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Lam Le Ly Vigge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="normalize.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+       </head>
+	   
+<body>
+<div id="header">
+<div id="nav">
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a class="le" href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="container">
+
+<div id="Sidebar">
+<aside>If you have a captive audience, the experience is a little different.  For example, In Windows 8, HTML5 developers can rely on Internet Explorer 10's expanded HTML5 support to build user interfaces that run as Metro-style applications utilizing the WinRT API.  In this case, you know for a fact where your HTML5 will be rendered and by whom, and you are free to use the full set of HTML5 features IE10 supports without having to worry about other browser vendors and version.  Another example might be that someday you're building web-based intranet applications that will run inside of your enterprise on an Intranet.  In this case, your IT department may have standardized on a specific web browser.  If this is the case, you are free to use the HTML features supported by that specific vendor and version of web browser.</aside>
+</div>
+
+<div id="content">
+<section>
+<h2>Background Every Web Developer Needs to Know</h2>
+
+<article>
+<h2>Introduction</h2>
+<p>In this article I'll describe the World Wide Web from a high level perspective, focusing on how a web page is request and delivered from a web server to a web browser.  Then, I want to talk about web browsers, how they interpret the HTML you write, differences between browsers, what are standards and to paraphrase the old joke "if Standards are so great, why are there so many of them?"  Finally, I'll talk about the thought process behind HTML5 and CSS3, why they were introduced and what they hope to achieve.</p>
+
+<h2>A Brief Technical Overview of the World Wide Web</h2>
+
+<p>The World Wide Web started out as a means for sharing scientific resources like research documentation between governmental and academic institutions.  It took time for the technologies and practices to evolve beyond its original purpose.</p>
+
+<p>From a technical perspective, the World Wide Web is comprised of several technologies ... first, it involves a simple markup (the Hyper-text Markup Language, or HTML) to both structure and format textual information.  When first introduced its claim to fame was the hyperlink which allowed the publisher of a document to add a link to other research papers available from  across the world, creating a virtual web of information (thus, the name).  Second, one or more interlinked pages are published to a server that is connected to an open network which we know today as the Internet.</p> 
+
+<p>A protocol was devised that specialized in allowing a request/response-style communication between two computers.  In other words, one user requests a document by typing an address for a document into a special program called a web browser, and the web browser packages up that request and sends it out into the network.  The request takes the form of a specially formatted packet of data.  You can think of this packet of information like a self-addressed stamped envelope -- containing both the address of the information requested and the address where that information should be sent back to.  This specially formatted packet is known as Hyper-text Transfer Protocol, or rather, HTTP, and for simplicity's sake you can think of it merely as an electronic envelope.  See Figure 1 for the types of information sent in the HTTP Request and HTTP Response messages.</p>  
+
+</article>
+</section>
+
+<div class="h2">How Web Browsers Parse HTML</div>
+<hr>
+
+<p>One final topic I want to talk about that affects modern web development is the implementations of various web browsers.  As you'll recall, once the requested web page has been returned, it will be parsed by a web browser then displayed on screen.</p>
+
+<p>There are four major parsing and rendering engines that are popular today.</p>
+
+<div class="ul">
+<ul>
+<li>Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.</li>
+
+<li>KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.</li>
+<li>Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.</li>
+
+<li>Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.</li>
+</ul>
+</div>
+<p>They are *mostly* the same, in so much that a web page will look mostly the same regardless of which web browser it is loaded into.  However it is the differences between them that most people discuss because it provides design challenges.</p>
+
+<h2>What do I mean when I use the terms "parse" and "render"?</h2>
+
+<p>The term "parse" refers to the process of breaking apart the HTML document to better "understand" the instructions coded there in.  During this phase, other resources, like external CSS files or JavaScript files, or images, must be requested so that the browser can get a complete picture of the code it is responsible for ultimately rendering.  After all those external resources are downloaded and analyzed, they are typically loaded into the computer's memory as a tree, or hierarchy, of software objects then passed to the rendering engine component of the browser - more about that in a moment.</p>
+</div>
+<div id="footer">
+Copyright © 2016 Lam Le Ly
+</div>
+</div>
+</body>
+
+</html>
