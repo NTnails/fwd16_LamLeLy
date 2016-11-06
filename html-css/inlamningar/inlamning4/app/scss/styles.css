@@ -1,0 +1,510 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css);
+/*********************
+BREAKPOINTS
+*********************/
+/* line 26, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* line 37, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 60, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 70, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/* line 84, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 99, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* line 109, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+a {
+  background-color: transparent; }
+
+/* line 117, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* line 126, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 133, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 149, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 156, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+/* line 203, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 211, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 218, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 225, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+sup {
+  top: -.5em; }
+
+/* line 229, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+sub {
+  bottom: -.25em; }
+
+/* line 278, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 287, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 297, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/* line 304, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 311, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/* line 321, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 345, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 359, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button {
+  overflow: visible; }
+
+/* line 369, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/* line 384, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 395, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/* line 402, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 410, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+input {
+  line-height: normal; }
+
+/* line 422, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 436, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 443, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+/* line 453, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 459, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 472, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 483, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/* line 492, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* line 501, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 507, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/* line 1, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_base.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 5, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_base.scss */
+* {
+  box-sizing: inherit; }
+  /* line 7, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_base.scss */
+  *:before, *:after {
+    box-sizing: inherit; }
+
+/* line 13, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_base.scss */
+body {
+  color: #f5f5f5;
+  background: #ffd166; }
+
+@media all and (min-width: 600px) {
+  /* line 3, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_sidebar.scss */
+  .flex {
+    flex: 1 1 48%; }
+    /* line 5, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/base/_sidebar.scss */
+    .flex:last-child {
+      flex: 1 1 96%; } }
+
+/*
+@import 'typography';
+*/
+/* line 1, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.pure-button {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  color: seagreen;
+  font-stretch: normal;
+  width: 100%;
+  background: gold; }
+
+/* line 9, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px; }
+
+/* line 15, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.box-container {
+  display: flex;
+  max-width: 960px;
+  flex-wrap: wrap;
+  color: #fff;
+  margin: 0 auto;
+  padding-top: 20px; }
+
+/* line 25, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 5px;
+  background-color: seagreen;
+  opacity: 0.7;
+  filter: Alpha(opacity=70); }
+
+/* line 36, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+/* line 42, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.h1 {
+  font-size: 20px;
+  padding-left: 10px; }
+
+/* line 48, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+div.h2 {
+  font-size: 16px;
+  margin: 10px; }
+
+/* line 52, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+div.h3 {
+  font-size: 16px;
+  margin: 10px;
+  text-align: right; }
+
+/* line 59, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.the {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  min-height: 400px;
+  width: auto;
+  margin: auto; }
+
+/* line 70, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.one, .two {
+  display: flex;
+  flex: 1 100%; }
+
+/* line 75, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+.three {
+  display: flex;
+  flex: 1 100%;
+  text-align: center; }
+
+/* line 81, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_flexcard.scss */
+img {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
+  width: 100%;
+  height: auto; }
+
+/* line 2, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px; }
+
+/* line 8, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+body {
+  color: #383838;
+  background: #ffffcc;
+  background-image: url("../images/o-SCOTLAND-facebook1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0; }
+
+/* header label Starts Here! */
+/* btn-menu */
+/* line 21, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); }
+
+/* line 26, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+#btn-menu {
+  display: none; }
+
+/* line 30, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+header label {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 0.1em solid #fff; }
+  /* line 36, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3); }
+
+/* line 42, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+.menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  margin-left: -70%;
+  transition: all 0.5s; }
+
+/* line 50, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+#btn-menu:checked ~ .menu {
+  margin: 0; }
+
+/* Flex Box Starts Here! */
+/* Flex Container */
+/* line 57, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+.menu {
+  position: absolute;
+  z-index: 1; }
+  /* line 58, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; }
+  /* line 65, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu li {
+    border-top: 1px solid #fff;
+    display: inline-block;
+    flex-basis: 100%; }
+    /* line 69, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+    .menu li a {
+      color: #fff;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px 5px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      transition: all 0.5s; }
+    /* line 81, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+    .menu li :hover {
+      background: transparent;
+      color: #000; }
+  /* line 87, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu ul li:hover ul {
+    display: flex;
+    flex-flow: row;
+    border-radius: 0px 0px 5px 5px;
+    background: rgba(0, 0, 0, 0.5); }
+  /* line 93, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu ul ul {
+    display: none;
+    position: absolute;
+    min-width: 100px; }
+    /* line 97, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+    .menu ul ul li {
+      display: block;
+      background-color: aqua; }
+      /* line 100, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+      .menu ul ul li a:hover {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.2); }
+
+/* Flex Item */
+/* here's z-index in action */
+/* line 115, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+.box-container {
+  position: static;
+  z-index: 0; }
+
+@media (min-width: 48em) {
+  /* line 121, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu li {
+    flex: 1 1 50%; }
+  /* line 124, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  #btn-menu, header label {
+    display: none; }
+  /* line 127, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu {
+    position: static;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-left: 0%;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1; }
+    /* line 133, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+    .menu li a {
+      display: block;
+      padding: 20px 20px;
+      color: #fff;
+      text-decoration: none; }
+  /* line 142, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .box-container {
+    position: relative;
+    z-index: 0; } }
+
+@media (min-width: 62em) {
+  /* line 149, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu li {
+    flex: 3; } }
+
+/* line 154, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+.menu .social {
+  flex: 1 1 25%;
+  order: -1;
+  font-size: 1.5em; }
+
+@media (min-width: 62em) {
+  /* line 161, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .menu {
+    position: relative;
+    z-index: 1; }
+    /* line 162, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+    .menu .social {
+      flex: 1;
+      order: 2;
+      font-size: 1.0em; }
+  /* line 170, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/layout/_menu.scss */
+  .box-container {
+    position: relative;
+    z-index: 0; } }
+
+/*
+// MODULES:
+// Building blocks that are part of the large picture
+@import 'modules/module_index';
+
+*/
+/* line 21, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/styles.scss */
+.testing {
+  width: 71.42857%; }
+
+/*# sourceMappingURL=styles.css.map */

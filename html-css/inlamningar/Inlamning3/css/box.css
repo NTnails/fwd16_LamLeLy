@@ -105,23 +105,32 @@ height: auto;
 }
 
 
-	
+
+
 
 /* Halv Flex Container */
 @media all and (min-width:600px) {
 
-.flex:nth-child(1n+1) { 
-	
-	flex: 1 0 96%;
-		max-width: 48%;
+
+
+	.flex {
+	flex:0 1 48%;
+
+			}
+		
+	.flex:last-child{
+		flex:0 1 98%;
+	}
 }
 	
-	.flex:nth-child(5){
-flex: 1 0 96%;
-		max-width: 96%;
-} 
+
+
+
+
 	
-}
+
+
+
 /* Full Flex Container */
 
 /*@media all and (min-width:1000px) {}*/

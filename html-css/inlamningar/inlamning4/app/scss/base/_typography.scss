@@ -1,0 +1,88 @@
+/**
+ * Set base font size on html for easiest REM use. Set it in em to respect
+ * user preferences. The calculation takes the user defined root px sie, divides
+ * it by 16, which is the most common browser default, and returns the em
+ * equalent of the user defined root px size in ems.
+ */
+:root {
+  font-size: #{unitless(map-get($text-sizes, root) / 16)}em;
+}
+
+/**
+ * Instill body constants. Font is declared with 1rem fontsize to allow the
+ * usage of the font shorthant, saves having to list all font properties,
+ * but font size is defined in the :root elelemt above.
+ */
+body {
+  font: map-get($text, body-weight) #{1rem} / 1.5 map-get($text, body);
+  color: map-get($color-defs, text);
+  -webkit-tap-highlight-color: map-get($color, bright);
+}
+
+/**
+ *  This should be applied to every text element, but won't because of bugs.
+ *  Hnece text elements should extend this.
+ */
+%typography-settings--default {
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures, contextual;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+}
+
+p,
+li,
+input,
+textarea,
+select,
+label,
+h1,
+h2,
+h3,
+h4 {
+  @extend %typography-settings--default;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.text--largest,
+.text--larger,
+.text--large,
+%headline {
+  @extend %typography-settings--default;
+  font: map-get($text, headline-weight) #{map-get($text-sizes, large)} / 1.2 map-get($text, headline);
+  letter-spacing: -.03em;
+}
+
+.text--small {
+  font-size: map-get($text-sizes, small);
+}
+
+.text--normal {
+  font-size: 1rem;
+}
+
+.text--larger {
+  @include breakpoint($mq-first) {
+    font-size: map-get($text-sizes, larger);
+  }
+}
+
+.text--largest {
+  font-size: map-get($text-sizes, larger);
+
+  @include breakpoint($mq-first) {
+    font-size: map-get($text-sizes, largest);
+  }
+}
+
+/**
+ *  Will only be spoken by screen readers, extend to hide text content
+ *  if needed.
+ */
+.text--speak {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+}

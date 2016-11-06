@@ -1,0 +1,47 @@
+// Font icons
+//@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css);
+$cl:#383838;
+$red: red;
+$gr: seagreen;
+$gold: gold;
+$dark: #282828;
+$rgba:rgba(0, 0, 0, 0.3);
+$bg: #ffffcc;
+$wh: #fff;
+$bl:#000;
+$smile:gainsboro;
+$aqua:aqua;
+
+$text: (
+  body: unquote("'Merriweather', serif"),
+  body-weight: 400,
+  headline: unquote("'Oswald', 'Helvetica Neue', Arial, sans-serif"),
+  headline-weight: 400,
+) !default;
+
+
+// COLORS
+$color: (
+  main: #24d4a0,
+  accent1: #ffd166,
+  accent2: #ec4970,
+  accent3: #1d8aaf,
+  accent4: #0a3a4a,
+  dark: #282828,
+  gray: #e1e1e1,
+  darkgrey: #666,
+  bright: #f5f5f5
+) !default;
+
+$color-defs: (
+  header: map-get($color, bright),
+  header-text: map-get($color, dark),
+  footer: map-get($color, dark),
+  footer-text: map-get($color, bright),
+  text: map-get($color, dark),
+  button-default: map-get($color, main),
+  button-default-text: map-get($color, bright),
+  input-field: transparentize(map-get($color, bright), .95),
+  input-field-text: map-get($color, bright),
+) !default;

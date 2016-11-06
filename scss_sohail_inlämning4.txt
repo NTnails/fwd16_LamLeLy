@@ -1,0 +1,25 @@
+i rott mapp scss = style.scss
+scss under mapp base,  = _header.scss, _sidebar.scss, _footer.scss
+
+style.scss import normalize.css sen style.css
+
+
+
+--------------------------------
+Ska inte laddas med i Git.
+
+maps mapp under css/maps
+
+dist
+node
+
+css/maps
+
+
+
+
+-----------------skriv npm_install  vid instalera nytt paket
+
+
+---------ska vara i rootten av ditt projekt-instalera 
+1. npm install gulp -g 

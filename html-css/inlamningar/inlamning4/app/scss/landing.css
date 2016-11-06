@@ -1,0 +1,45 @@
+/* line 1, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvettica, sans-serif;
+  background: "$bg";
+  background-image: url("../images/o-SCOTLAND-facebook1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+/* line 14, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px; }
+
+/* line 23, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+.box1 {
+  font-size: 58px;
+  color: "$smile"; }
+
+/* line 28, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+.box2 {
+  color: "$wh"; }
+
+/* line 33, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+div.h1 {
+  font-size: 30px; }
+
+/* line 36, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+div.h2 {
+  font-size: 16px; }
+
+/* line 39, C:/Users/NTnails.se/Desktop/inlamning4/app/scss/landing.scss */
+div.h3 {
+  font-size: 16px;
+  text-align: left; }
+
+/*# sourceMappingURL=landing.css.map */

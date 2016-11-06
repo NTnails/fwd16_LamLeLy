@@ -1,0 +1,48 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// ***********************************
+// MIXINS
+// ***********************************
+
+@mixin transition-all($time:1s){
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-ms-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+
+@mixin fade($time:0.5s){
+	-webkit-transition: background-color $time ease-in-out;
+	-moz-transition: background-color $time ease-in-out;
+	-o-transition: background-color $time ease-in-out;
+	-ms-transition: background-color $time ease-in-out;
+	transition: background-color $time ease-in-out;
+}
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
