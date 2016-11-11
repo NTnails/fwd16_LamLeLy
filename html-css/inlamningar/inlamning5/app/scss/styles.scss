@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'utilities/utilities_index';
+
+// 2. Base stuff
+@import
+  'base/base_index';
+ 
+// 3. Layout-related sections
+@import
+  'layout/layout_index';
+  
+// 4. Components
+@import
+  'modules/modules_index';
+
+// 5. Page-specific styles
+@import
+  'pages/home';
+
+// 6. Themes
+@import
+  'themes/default';

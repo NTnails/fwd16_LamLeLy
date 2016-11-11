@@ -1,0 +1,383 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+header,
+footer,
+body,
+nav,
+div,
+img,
+a,
+ul,
+li,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-size: 15pt;
+    color: #383838;
+    background: #ffffcc;
+    background-image: url(http://thiswallpaper.com/cdn/hdwallpapers/677/Isle%20of%20skye%20scotland%20cool%20pictures%20for%20desktop%20wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*sticky footer*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*mobil menyn*/
+
+#nav label {
+    position: relative;
+    display: block;
+    min-height: 2em;
+    padding: .45em;
+    font-size: 1.1em;
+    margin: 0;
+    cursor: pointer;
+    background: #005292;
+    line-height: 2em;
+    color: #bfe1fb;
+}
+
+
+/*s�tt till hamburgar ikonet och koplla med position absolute mot #nav label*/
+
+#nav label:after {
+    position: absolute;
+    right: 1em;
+    top: .2em;
+    content: "\2261";
+    font-size: 1.8em;
+    color: white;
+}
+
+
+/*d�lj checkboxen*/
+
+#nav input.trigger {
+    position: absolute;
+    display: none;
+}
+
+
+/*n�r checkbosen �r checkad visa allt!! f�r mobilmenyn*/
+
+#nav input.trigger:checked~ul,
+#nav input.trigger:checked~ul li ul {
+    display: block !important;
+}
+
+
+/*D�lj mobilmenyn om inte checkboxen inte �r iklickad*/
+
+#nav ul {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+
+/*Visa huvudmenyn li med en l�nktagg*/
+
+#nav ul li a {
+    display: block;
+    padding: 1em;
+    background: #0F9962;
+    color: white;
+    border-right: 1px solid #0a6b44;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/*�ndra hover f�rgen f�r huvudmeny f�r li*/
+
+#nav ul li a:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+
+/*ta bort sista border-right f�r sista ul li*/
+
+#nav ul li:last-of-type a {
+    border-right: 0px;
+}
+
+
+/*s�tt ditt en padding-left f�r f�rsta dropdown i mobilen*/
+
+#nav ul li .sub1 li a {
+    padding-left: 2.5em;
+}
+
+
+/*s�tt ditt en h�gre padding-left f�r andra dropdown i mobilen*/
+
+#nav ul li .sub1 li .sub2 li a {
+    padding-left: 4.125em;
+}
+
+.content {
+    display: flex;
+    /*background-image: url(http://i.huffpost.com/gen/1842880/images/o-NIGHTCLUB-facebook.jpg);*/
+    opacity: 0.7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #999;
+}
+
+ht .hero_container {
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+}
+
+.hero_image {
+    flex: 4;
+}
+
+.hero_presentation {
+    flex: 2;
+}
+
+.foot {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px;
+    margin: 5px;
+    color: white;
+    background: seagreen;
+    opacity: 0.7;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    padding: 8px 15px;
+    background: rgba(255, 0, 255, 0.7);
+    border: 0px solid #dbdbdb;
+    color: white;
+}
+
+.button {
+    position: relative;
+    padding: 6px 15px;
+    left: -8px;
+    border: 2px solid #207cca;
+    background-color: #207cca;
+    color: #fafafa;
+}
+
+
+/*Desktop kod*/
+
+@media (min-width: 48.563em) {
+    /*d�lj mobil menyn*/
+    #nav label {
+        display: b;
+    }
+    /*visa desktop menyn*/
+    #nav ul {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    /*s�tt alla menyer till att bli lika stora, s�tt ankaret f�r dropdown*/
+    #nav ul li {
+        position: relative;
+        text-align: center;
+        flex: 1;
+    }
+    #nav ul li .sub1 {
+        display: none !important;
+        position: absolute;
+        top: 3.0625em;
+        left: 0;
+        width: 12.5em;
+        z-index: 200;
+    }
+    /*Visa den f�rsta dropdown*/
+    #nav ul li:hover>.sub1 {
+        display: block !important;
+    }
+    #nav ul li .sub1 li {
+        text-align: left;
+    }
+    #nav ul li .sub1 li .sub2 {
+        z-index: 300;
+        top: 0px;
+        left: 12.4em;
+    }
+    #nav ul li .sub1 li .sub2 li a {
+        padding-left: 30px !important;
+    }
+    #nav ul li>.sub2 {
+        display: none;
+        position: absolute;
+    }
+    #nav ul li:hover>.sub2 {
+        display: block !important;
+    }
+    .hero_container {
+        flex-flow: row wrap;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .hero_presentation {
+        border-left: solid thin white;
+        padding-left: 1em;
+    }
+    .foot {
+        flex-flow: row wrap;
+        margin-top: auto;
+        /*for sticky footer*/
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .col {
+        flex: 1;
+    }
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+
+/*Flex items*/
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0.7;
+}
+
+.list-item {
+    display: flex;
+    padding: 0.5em;
+    width: 100%;
+}
+
+@media all and (min-width: 40em) {
+    .list-item {
+        width: 50%;
+    }
+    .list-item:last-child {
+        width: 99.99%;
+    }
+    .list-item:nth-child(-1n) {
+        width: 33.33%;
+    }
+}
+
+@media all and (min-width: 60em) {
+    .list-item {
+        width: 33.33%;
+    }
+    .list-item:nth-child(4n) {
+        width: 66.66%;
+    }
+    .list-item:last-child {
+        width: 33.33%;
+    }
+    .list-item:nth-child(even) {
+        color: red;
+    }
+    .list-item:nth-child(odd) {
+        color: green;
+    }
+}
+
+.list-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+
+.list-content p {
+    flex: 1 0 auto;
+}
+
+.soc {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: seagreen;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.emp {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5px;
+}
+
+.soc-icon {
+    display: flex;
+    flex: 1 1 25%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fa {
+    font-size: 2em;
+    color: white;
+}
+
+@media (min-width: 30.00em) {
+    .emp {
+        flex: 1 1 50%;
+    }
+}
+
+@media (min-width: 48.00em) {
+    .emp {
+        flex: 3;
+        padding: 10px;
+    }
+    .soc-icon {
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

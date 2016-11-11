@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css);
+$cl:#383838;
+$red: red;
+$gr: seagreen;
+$gold: gold;
+$dark: #282828;
+$rgba:rgba(0, 0, 0, 0.3);
+$bg: #ffffcc;
+$wh: #fff;
+$bl:#000;
+$smile:gainsboro;
+$aqua:aqua;
+
+$text: (
+  body: unquote("'Merriweather', serif"),
+  body-weight: 400,
+  headline: unquote("'Oswald', 'Helvetica Neue', Arial, sans-serif"),
+  headline-weight: 400,
+) !default;
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small':  ( min-width:  40em ),
+  'medium': ( min-width:  48em ),
+  'large':  ( min-width: 62em ),
+  'wide':  ( min-width: 75em ),
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

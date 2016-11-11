@@ -1,0 +1,107 @@
+header {
+    width: 100%;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #000;
+}
+
+#primary_nav_wrap {
+    margin-top: 15px;
+    position: relativ;
+    background: rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin-left: 170%;
+    transition: all 0.5s;
+    border: 1px solid #000;
+}
+
+#btn-menu:checked~#primary_nav_wrap {
+    margin: 0;
+}
+
+#primary_nav_wrap ul {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+#primary_nav_wrap ul a {
+    display: block;
+    position: relative;
+    border-top: 10px solid red;
+    color: #333;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 70px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#primary_nav_wrap ul li {
+    display: flex;
+    flex-basis: 100%;
+    position: relative;
+    flex-flow: column;
+    margin: 0;
+    padding: 0
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+    background: #ddd
+}
+
+#primary_nav_wrap ul li:hover {
+    background: #f6f6f6
+}
+
+#primary_nav_wrap ul ul {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 10px;
+    background: #fff;
+    padding: 0
+}
+
+#primary_nav_wrap ul ul li {
+    display: flex;
+    width: 170px;
+}
+
+#primary_nav_wrap ul ul a {
+    line-height: 100%;
+    padding: 10px 10px;
+}
+
+#primary_nav_wrap ul ul ul {
+    display: flex;
+    top: 0;
+    float: 0;
+}
+
+#primary_nav_wrap ul li:hover>ul {
+    display: block
+}
