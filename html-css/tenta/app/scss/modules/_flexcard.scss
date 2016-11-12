@@ -1,0 +1,23 @@
+//Intialize flex-card
+
+.list {
+  @extend %flexcard-container;
+		
+}
+
+.list-item{
+	@include select-card(2){
+
+@include respond-to('large') {
+  
+    width: 66.66%;
+  
+}
+		
+	}
+}
+
+.list-content{
+	@extend %flexcard-content;
+}
+

@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+///Mixin using breakpoint map 
+@mixin respond-to($breakpoint) {
+ /// If the key exists in the map
+@if map-has-key($breakpoints, $breakpoint) {
+/// Prints a media query based on the value
+@media #{inspect(map-get($breakpoints, $breakpoint))} {
+  @content;
+ }
+ }
+// 
+/// If the key doesn't exist in the map
+@else {
+@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+ + "Available breakpoints are: #{map-keys($breakpoints)}.";
+ }
+}
+
+///Mixin for page background
+/// @param {url} $imagepath - set the url of the page-bg
+@mixin page-bg($imagepath,$bgrepeat:no-repeat,$bgattachment:fixed,$bgsize:cover) {
+	
+		color: map-get($color, bright);
+  		background: map-get($color, accent1);
+        background-image: url($imagepath);
+        background-repeat: $bgrepeat;
+		background-attachment:$bgattachment;
+		background-size:$bgsize;
+    
+	}
+
+  ///Mixin for buttons
+  @mixin button-bg($bg) {
+  background: $bg;
+  @extend %btn;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+///border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// ***********************************
+// MIXINS
+// ***********************************
+
+@mixin transition-all($time:1s){
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-ms-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+
+@mixin fade($time:0.5s){
+	-webkit-transition: background-color $time ease-in-out;
+	-moz-transition: background-color $time ease-in-out;
+	-o-transition: background-color $time ease-in-out;
+	-ms-transition: background-color $time ease-in-out;
+	transition: background-color $time ease-in-out;
+}

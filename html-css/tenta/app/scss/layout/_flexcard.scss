@@ -1,0 +1,66 @@
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.box-container {
+  max-width: 1180px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.flex {
+  flex-basis: auto;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 5px;
+  background: lightpink;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.h1 {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+div {
+  &.h2 {
+    font-size: 16px;
+    margin: 10px;
+  }
+  &.h3 {
+    font-size: 16px;
+    margin: 10px;
+    text-align: left;
+  }
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: auto;
+  margin: auto;
+}
+
+.one, .two, .three {
+  display: flex;
+}
+
+
+
+@media (min-width: 48em) {
+  .flex {
+    flex: 1 1 25%;
+  }
+}
