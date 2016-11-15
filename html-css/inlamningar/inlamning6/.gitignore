@@ -1,0 +1,7 @@
+dist 
+node_modules
+# Ignore Mac DS_Store files
+.DS_Store
+*.css.map
+dist/**/*
+sassdoc
