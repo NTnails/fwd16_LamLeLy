@@ -22,7 +22,6 @@
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.0.4",
-    "npm-install-webpack-plugin": "^4.0.4",
     "run-sequence": "^1.1.2",
     "sassdoc": "2.1.20"
   }

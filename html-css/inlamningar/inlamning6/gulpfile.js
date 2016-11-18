@@ -64,12 +64,12 @@ gulp.task('useref', function() {
 
 // Optimizing Images 
 gulp.task('images', function() {
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
    .pipe(cache(imagemin({
       optimizationLevel: 5, progressive: true, interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/img'))
     .pipe(notify({ message: 'Images task complete' }));
 
 });
@@ -97,7 +97,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!dist/img', '!dist/img/**/*']);
 });
 
 // Build Sequences
@@ -113,7 +113,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts', 'sassdoc'],
+    ['useref', 'img', 'fonts', 'sassdoc'],
     callback
   )
 })

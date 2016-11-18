@@ -1,8 +1,10 @@
+
 .wrapper {
   max-width: 100%;
   margin: 0 auto;
   padding: 0px;
-}
+  }
+
 
 .box-container {
   max-width: 1180px;
@@ -14,13 +16,16 @@
 }
 
 .flex {
+  @include linx(white, blue, green, red);
+  @include loop-colors;
+  @include fifth;
+   @include second;
   flex-basis: auto;
   flex-wrap: wrap;
   margin: 5px;
   padding: 5px;
   background: lightpink;
 }
-
 .name {
   display: flex;
   justify-content: space-between;
@@ -61,7 +66,7 @@ div {
 @media (min-width: 40em) {
   .flex {
     flex: 1 1 40%;
-  }
+      }
 }
 
 @media (min-width: 48em) {
@@ -69,3 +74,4 @@ div {
     flex: 1 1 25%;
   }
 }
+

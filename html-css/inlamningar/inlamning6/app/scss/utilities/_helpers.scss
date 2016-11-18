@@ -11,11 +11,11 @@
   display: table;
 }
 //Placeholders and classes: ;
-///.pure-button
+///.pure-button transition, fade, bg och border radius 
 .pure-button{
  @include button-bg(#e74c3c);
 	@include transition-all($time:1s)
-	@include fade($time:0.5s)
+	@include fade($time:0.8s)
 	@include border-radius(10px);
 	color:seagreen;
 	width: 100%;

@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains very basic styles.
+/// -----------------------------------------------------------------------------
 
 /**
  * Set up a decent box model on the root element
@@ -23,23 +23,67 @@ html {
 	margin: 0 auto;
 	padding: 0px;
 }
+
+
+/// ***********************************
+/// BASE
+/// ***********************************
+
 /**
  * Basic styles for links
  */
 a {
   color: $brand-color;
   text-decoration: none;
-
+  
   @include on-event {
     color: $text-color;
     text-decoration: underline;
   }
 }
 
+body{
+  color: map-get($color, bright);
+  background: map-get($color, dark);
+  background-image: url(../img/2013-06-11_1_Age_NTnails.jpg);
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size:cover;
+}
 
-// ***********************************
-// BASE
-// ***********************************
+img {
+  width: 100%;
+  height: auto;		
+}
 
 
+/// Loops colors through colormap
+@mixin loop-colors {
+   @for $i from 1 through length($colors){
+      &:nth-child(#{$i}){
+         background-color: nth($colors, $i);
+      }
+   }
+}
 
+///Changes property for every 5th element
+@mixin fifth{
+   @for $i from 1 through 10{
+      @if $i % 5 == 0 {
+         @include respond-to('medium'){
+            &:nth-child(#{$i}){
+               flex: 1 1 58%;
+            }
+         }
+      }
+   }
+}
+
+/// Changes opacity for every 2nd element
+@mixin second {
+   @for $i from 1 through length($opacities){
+      &:nth-child(#{$i}){
+         opacity: nth($opacities, $i);
+      }
+   }
+}
