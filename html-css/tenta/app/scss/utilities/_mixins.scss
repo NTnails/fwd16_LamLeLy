@@ -1,21 +1,18 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
 ///Mixin using breakpoint map 
 @mixin respond-to($breakpoint) {
- /// If the key exists in the map
-@if map-has-key($breakpoints, $breakpoint) {
-/// Prints a media query based on the value
-@media #{inspect(map-get($breakpoints, $breakpoint))} {
-  @content;
- }
- }
-// 
-/// If the key doesn't exist in the map
-@else {
-@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
- + "Available breakpoints are: #{map-keys($breakpoints)}.";
- }
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
 }
 
 ///Mixin for page background
@@ -44,46 +41,63 @@
   } 
 }
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
+///Flexcard mixin
+
+@mixin select-card($num) {
+	@extend %flexcard-item;
+  &:nth-child(#{$num}n) {
+    @content
+  }
+}
+
+//----------------------------------
+/// mixin ändra kort storlek och färg efter 4:e kort
+
+@mixin each($num) {
+  &:nth-child(#{$num}n) {
+    @content
+  }
+}
+
+.box-container{
+  display:flex;
+  border:5px solid goldenrod;
+}
+.flex{
+  flex-basis:50%;
+  background-color:red;
+  color:white;
+  padding: 10px;
+  margin: 5px;
+}
+
+.flex{
+  @include each(3+1)
+  {
+    background: seagreen;
+    flex-basis:20%;
+  }
+}
+
+/// @mixin link @include linx(white, blue, green, red);
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
     }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
     }
   }
 }
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
-}
-///border-radius
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
-// ***********************************
-// MIXINS
-// ***********************************
+/// ***********************************
+/// MIXINS Transition & Fade
+/// ***********************************
 
 @mixin transition-all($time:1s){
 	-webkit-transition: all $time ease-in-out;
@@ -93,10 +107,67 @@
 	transition: all $time ease-in-out;
 }
 
-@mixin fade($time:0.5s){
+@mixin fade($time:0.8s){
 	-webkit-transition: background-color $time ease-in-out;
 	-moz-transition: background-color $time ease-in-out;
 	-o-transition: background-color $time ease-in-out;
 	-ms-transition: background-color $time ease-in-out;
 	transition: background-color $time ease-in-out;
 }
+
+/// Loops colors through colormap
+@mixin loop-colors {
+   @for $i from 1 through length($colors){
+      &:nth-child(#{$i}){
+         background-color: nth($colors, $i);
+      }
+   }
+}
+
+///Changes property for every 5th element
+@mixin fifth{
+   @for $i from 1 through 10{
+      @if $i % 5 == 0 {
+         @include respond-to('medium'){
+            &:nth-child(#{$i}){
+               flex: 1 1 58%;
+            }
+         }
+      }
+   }
+}
+
+/// Changes opacity for every 2nd element
+/// Changes the opacity on all the cards
+/// @param $opacity - requested opacity
+@mixin second {
+   @for $i from 1 through length($opacities){
+      &:nth-child(#{$i}){
+         opacity: nth($opacities, $i);
+      }
+   }
+}
+
+
+$cardcolors: (
+ 1: red,
+ 2: green,
+ 3: blue,
+ 4: purple,
+ 5: brown,
+ 6: magenta,
+ 7: turquoise,
+ 8: yellow,
+ 9: pink,
+ 10: orange,
+);
+
+
+
+/// Color Loop
+@each $i, $txtcolor in $cardcolors {
+.megamenu ul:nth-of-type(#{$i}) {
+background-color: ($txtcolor);
+}
+}
+

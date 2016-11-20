@@ -15,24 +15,3 @@
 .btn-red {
    @include button-bg(#e74c3c);
 }
-
-.pure-button{
-  @include transition-all($time:1s)
-	@include fade($time:0.5s)
-	@include border-radius(20px);
-	color:seagreen;
-	width: 100%;
-  height:100px;
-  padding: 10px;
-  margin: 10px;
-	background: gold;
-  text-align: center;
-}
-
-img {
-  @include border-radius(50px)
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  filter: Alpha(opacity = 70);
-}

@@ -6,6 +6,9 @@
 }
 
 .list-item{
+	@include loop-colors;
+		@include second;
+		
 	@include select-card(2){
 
 @include respond-to('large') {
@@ -19,5 +22,7 @@
 
 .list-content{
 	@extend %flexcard-content;
+
 }
+
 

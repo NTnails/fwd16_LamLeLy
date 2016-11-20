@@ -1,45 +1,38 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
 
-/**
- * Set up a decent box model on the root element
- */
+//Modern border-box applied everywhere.
 html {
   box-sizing: border-box;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
-*, *::before, *::after {
+// inherit box-sizing
+*,
+*:before,
+*:after {
   box-sizing: inherit;
-} 
-.wrapper {
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 0px;
-}
-/**
- * Basic styles for links
- */
-a {
-  color: $brand-color;
-  text-decoration: none;
-
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
 }
 
+body
+{   /* Settings rules for the whole site */
+    background-image: url('../images/2013-06-11_1_Age_NTnails.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 0;
+    }
 
-// ***********************************
-// BASE
-// ***********************************
+
+ul, li, h1, h2, h3, h4, h5, h6, p
+{   /* Set start margin and padding for many elements */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+  width: 100%;
+  height: auto;		
+}
+
 
 
 
