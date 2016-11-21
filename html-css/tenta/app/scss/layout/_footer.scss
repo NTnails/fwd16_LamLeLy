@@ -1,38 +1,84 @@
-#footer
-{   /* How to layout the items in the footer */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 10px;
-    background-color: #000
+html {
+	box-sizing: border-box;
+}
 
-    .footcol
-    {   /* How to layout each column inside the footer */
-        display: flex;
-        flex-flow: row;
-        flex: 1;
-        text-align: center;
-        margin: 10px 0;
-        left: 0;
-           background-color: #000
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
-        a
-        {   /* How to treat links in footer */
-            margin-bottom: 10px;
-            padding: 0;
-            font-size: 1.2em;
-            color: map-get($colors, linklight);
-            transition: 0.3s;
 
-            &:hover
-            {
-                color: map-get($colors, linkhover);
-            }
-        }
-    }
 
-    @include breakpoint(small)
-    {   /* Flow the items in a row on bigger screens */
-        flex-flow: row wrap;
-    }
+a {
+	color: white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 20px 5px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+a:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+
+/* Mobil Flex Container */
+
+#nav ul {
+	display: flex;
+	border: 1px solid black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Flex Item */
+
+#nav ul {
+	flex-wrap: wrap;
+}
+
+#nav li {
+	flex: 1 1 100%;
+}
+
+#nav .social {
+	flex: 1 1 25%;
+}
+
+@media all and (min-width:500px) {
+	#nav ul {
+		flex-wrap: wrap;
+	}
+	#nav li {
+		flex: 1 1 50%;
+	}
+	#nav .social {
+		flex: 1 1 25%;
+	}
+}
+
+@media all and (min-width:960px) {
+	#nav ul {
+		flex-wrap: wrap;
+	}
+	#nav li {
+		flex: 3;
+	}
+	#nav .social {
+		flex: 1;
+	}
 }
