@@ -1,0 +1,46 @@
+
+.wrapper
+{   /* Settings rules for the whole site */
+   display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.5);
+  
+}
+
+.box1 {
+  font-size: 58px;
+background-color: rgba(255, 0, 0, 0.5);
+}
+
+.box2 {
+  padding: 10px;
+  margin: 10px;
+  color: red;
+  background-color: rgba(gray, 0.5);
+}
+
+
+  &.h1 {
+    font-size: 30px;
+  }
+  &.h2 {
+    font-size: 16px;
+  }
+  &.h3 {
+    font-size: 16px;
+  }
+
+

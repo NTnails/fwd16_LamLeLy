@@ -6,8 +6,7 @@
 }
 
 .list-item{
-	@include loop-colors;
-		@include second;
+	
 		
 	@include select-card(2){
 

@@ -2,6 +2,10 @@
 
 ///Button placeholder
 %btn{
+	text-align: center;
+	justify-content: center;
+	display: flex; 
+  padding: 0.5em;
 	width: 200px;
   height: 200px;
 	border-radius: 50%;
@@ -40,8 +44,8 @@ margin: 10px;
     width: 33.33%;
 		
 		img{
-			object-fit: cover;
-  		width: 100%;
+		
+  		width: 200px;
   		height: 150px;
 		}
   }
@@ -50,10 +54,7 @@ margin: 10px;
 
 ///Flexcard content placeholder
 %flexcard-content{
-	
-	background-color: #fff;
-  display: flex;
-  flex-direction: column;
+	  flex-direction: column;
   padding: 1em;
 	width: 100%;
 p {

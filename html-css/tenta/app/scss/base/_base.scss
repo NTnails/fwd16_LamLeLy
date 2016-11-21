@@ -13,14 +13,20 @@ html {
 
 body
 {   /* Settings rules for the whole site */
-    background-image: url('../images/2013-06-11_1_Age_NTnails.jpg');
+    background-image: url(../images/South-Africa-Safari.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 auto;
     padding: 0;
-    }
+  
+}
 
+body>header
+{   /* Settings to main header content */
+    font-size: 1.5em;
+    min-height: 50px;
+}
 
 ul, li, h1, h2, h3, h4, h5, h6, p
 {   /* Set start margin and padding for many elements */
@@ -28,9 +34,18 @@ ul, li, h1, h2, h3, h4, h5, h6, p
     padding: 0;
     list-style: none;
 }
-img {
-  width: 100%;
-  height: auto;		
+
+a
+{   /* Standard link setting */
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+img
+{   /* How to treat images per default */
+    max-width: 100%;
+    height: auto;
 }
 
 
